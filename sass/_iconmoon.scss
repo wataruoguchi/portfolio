@@ -1,0 +1,81 @@
+@font-face {
+	font-family: 'icomoon';
+	src:url('../fonts/icomoon.eot?-ke7qg5');
+	src:url('../fonts/icomoon.eot?#iefix-ke7qg5') format('embedded-opentype'),
+		url('../fonts/icomoon.woff?-ke7qg5') format('woff'),
+		url('../fonts/icomoon.ttf?-ke7qg5') format('truetype'),
+		url('../fonts/icomoon.svg?-ke7qg5#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-webdev:before {
+	content: "\e601";
+}
+
+.icon-teamwork:before {
+	content: "\e602";
+}
+
+.icon-hardwork:before {
+	content: "\e603";
+}
+
+.icon-available:before {
+	content: "\e604";
+}
+
+.icon-knowledge:before {
+	content: "\e605";
+}
+
+.icon-reliable:before {
+	content: "\e606";
+}
+
+.icon-responsibility:before {
+	content: "\e607";
+}
+
+.icon-OOPmind:before {
+	content: "\e608";
+}
+
+.icon-selfMotivated:before {
+	content: "\e60a";
+}
+
+.icon-mindset:before {
+	content: "\e60b";
+}
+
+.icon-analysis:before {
+	content: "\e60c";
+}
+
+.icon-contribution:before {
+	content: "\e60d";
+}
+
+.icon-cog:before {
+	content: "\e994";
+}
+
+.icon-terminal:before {
+	content: "\ea81";
+}
+

@@ -1,0 +1,65 @@
+<div class="scrollToTop"><i class="icon-up-open-big"></i></div>
+<header class="header">
+<nav class="navbar navbar-default navbar-fixed-top">
+	<!-- http://stackoverflow.com/questions/14741988/twitter-boostrap-navbar-with-angular-js-collapse-not-functioning -->
+	<div class="container">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" ng-click="isCollapsed = !isCollapsed" data-target="#portfolio-navbar-collapse">
+				<span class="sr-only">Toggle Navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<span data-target="#top">
+				<a href="#top" class="navbar-brand" du-smooth-scroll><span class="f-name">Wataru </span><span class="l-name">Oguchi</span></a>
+			</span>
+		</div>
+		<div class="collapse navbar-collapse" collapse="isCollapsed" id="portfolio-navbar-collapse">
+			<ul class="nav navbar-nav navbar-right bs-sidenav" bs-scrollspy-list>
+				<li><a href="#top" du-smooth-scroll>Home</a></li>
+				<li><a href="#experience" du-smooth-scroll>Experience</a></li>
+				<li><a href="#skills" du-smooth-scroll>Skills</a></li>
+				<li><a href="#why" du-smooth-scroll>Qualities</a></li>
+				<!-- <li><a href="#work" du-smooth-scroll>Work</a></li> -->
+				<li><a href="#about" du-smooth-scroll>About</a></li>
+				<li><a href="#contact" du-smooth-scroll>Contact</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+</header>
+
+<!-- contents start -->
+<section id="top">
+	<top></top>
+</section>
+<section id="experience" class="section-padding">
+	<experience></experience>
+</section>
+<section id="skills" class="section-padding">
+	<skills></skills>
+</section>
+<section id="why" class="section-padding">
+	<why></why>
+</section>
+<!-- <section id="work" class="section-padding">
+	<work></work>
+</section> -->
+<section id="about" class="section-padding">
+	<about></about>
+</section>
+<section id="contact" class="section-padding">
+	<contact></contact>
+</section>
+<!-- contents end -->
+<!-- footer start -->
+<footer class="footer-padding">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<p class="copyright">&copy; Copyright 2014 | <a href="http://wataruoguchi.com/">wataruoguchi.com</a></p>
+			</div>
+		</div>
+	</div>
+</footer>
+<!-- footer end -->

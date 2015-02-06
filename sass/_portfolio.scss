@@ -1,0 +1,492 @@
+$main-color: #fff;
+$main-bgcolor: darken($main-color, 3%);
+$main-fontcolor: #323237;
+$secondary-color: #202f55;
+$bg-img: url('../asset/wataruoguchi-engineer-bg1.jpg');
+@mixin secondary-typeface {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+}
+@mixin transition($transition-property, $transition-time, $method) {
+    -webkit-transition: $transition-property $transition-time $method;
+    -moz-transition: $transition-property $transition-time $method;
+    -ms-transition: $transition-property $transition-time $method;
+    -o-transition: $transition-property $transition-time $method;
+    transition: $transition-property $transition-time $method;
+}
+@mixin linear-gradient($direction, $color-stops...) {
+    background: nth(nth($color-stops, 1), 1);
+    background: -webkit-linear-gradient(legacy-direction($direction), $color-stops);
+    background: linear-gradient($direction, $color-stops);
+}
+@mixin center-align-icon($icon-font-size) {
+    .frame-of-icon {
+        position: relative;
+        &:before {
+            content: ' ';
+            display: block;
+            padding-top: 100%;                
+        }
+        [class^="icon-"] {
+            font-size: $icon-font-size;
+            line-height: 0;
+            position: absolute;
+            top: 50%;
+            right: 0;
+            left: 0;
+            text-align: center;
+        }
+    }
+}
+@mixin simple-transition {
+    transition-delay: 0s, 0s;
+    transition-duration: 0.15s, 0.15s;
+    transition-timing-function: ease-in-out, ease-in-out;
+}
+
+/* main */
+html, body {
+    height: 100%;
+    width: 100%;
+    font-size: 16px;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    line-height: 1.5;
+    color: $main-color;
+    background-color: $main-bgcolor;
+}
+
+h2 {
+    @include secondary-typeface;
+    font-size: 70px;
+    text-transform: uppercase;
+    line-height: 2;
+}
+.lead {
+    font-size: 30px;
+    line-height: 1.4;
+    padding-bottom: 100px;
+}
+
+/* main - layout */
+.page-top-padding {
+    padding: 180px 0;
+}
+.section-padding {
+    padding: 100px 0;
+}
+
+/* navigation bar */
+.navbar-default .navbar-brand {
+    color: $main-color;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+    color: darken($main-color, 10%);    
+}
+.navbar-default .navbar-nav > li {
+    & > a {
+        color: $main-color;
+        font-size: 1.125rem;
+        &:hover, &:focus {
+            color: $main-color;
+        }
+    }
+}
+.navbar, .collapsing , .in {
+    border: none;
+}
+
+.header, .navbar {
+    background-color: rgba(0,0,0,0.3);
+    @include transition(all, 0.2s, ease-in-out);
+}
+.navbar-brand {
+    font-size: 1.875rem;
+    text-transform: uppercase;
+}
+.f-name {
+    font-weight: 800;
+}
+
+/* top */
+#top {
+    color: $main-color;
+
+    .top-background {
+        background-image: $bg-img;
+        background-position: 50% 50%;
+        background-size: cover;
+    }
+    .wataru-img {
+        width: 60%;
+        border: solid 10px $main-color;
+        margin-top: 40px;
+
+    }
+    .header-text {
+        text-transform: uppercase;
+        line-height: 1;
+        font-weight: 800;
+    }
+    .header-line-2 {
+        @include secondary-typeface;
+    }
+    .header-line-3 {
+        line-height: 0.75;
+    }
+    .header-jobtitle {
+        padding: 40px 0;
+        font-size: 2rem;
+        font-weight: 800;
+        line-height: 1.3;
+    }
+    .header-address {
+        font-size: 1.125rem;
+        .glyphicon {
+            padding-right: 10px;
+        }
+    }
+}
+/* why */
+#why {
+    color: $main-fontcolor;
+    .quality-card > .thumbnail {
+        background-color: $main-color;
+        border-style: none;
+        border-radius: 0;
+        margin: 15px 0;
+        .caption-title {
+            @include secondary-typeface;
+            font-size: 1.375rem;
+        }
+        @include center-align-icon(110px);
+        i {
+            color: $secondary-color;
+        }
+        p {
+            padding: 10px;
+        }
+    }
+}
+
+/* about */
+#about {
+    /* http://jordanhollinger.com/2014/01/29/css-gaussian-blur-behind-a-translucent-box/ */
+    position: relative;
+    overflow: hidden;
+
+    .background-image {
+        background-image: $bg-img;
+        background-size: cover;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 99;
+        background-position: 50% 50%;
+
+        $blur-length: 3px;
+        -webkit-filter: blur($blur-length);
+        -moz-filter: blur($blur-length);
+        -o-filter: blur($blur-length);
+        -ms-filter: blur($blur-length);
+        filter: blur($blur-length);
+        filter: url('../asset/blur.svg#blur');
+
+        
+        $scaleRate: 1.2;
+        -webkit-transform: scale($scaleRate, $scaleRate);
+        -ms-transform: scale($scaleRate, $scaleRate);
+        transform: scale($scaleRate, $scaleRate);
+    }
+    .container {
+        position: relative;
+        z-index: 100;
+        .text-container {
+            background-color: rgba(0,0,0, 0.5);
+            p {
+                font-size: 26px;
+                line-height: 2;
+                padding: 60px 0;
+            }
+        }
+    }
+}
+
+/* experience */
+#experience {
+    background-color: $main-color;
+    color: $main-fontcolor;
+    .row {
+        background-color: $main-color;
+        &:nth-of-type(odd) {
+            background-color: $main-bgcolor;
+        }
+        .header-years {
+            color: $secondary-color;
+            .number, .plus {
+                font-weight: 800;
+            }
+            .number {
+                font-size: 300px;
+                position: relative;
+                letter-spacing: -20px;
+                line-height: 1;
+            }
+            // TODO: responsive layout and color
+            .plus {
+                font-size: 160px;
+                position: absolute;
+                bottom: 60px;
+                right: -80px;
+            }
+            .years {
+                @include secondary-typeface;
+                font-size: 60px;
+                text-transform: uppercase;
+                letter-spacing: 0;
+                position: absolute;
+                top: -80px;
+                left: 30px;
+            }
+        }
+        .align-to-left-column {
+            font-size: 24px;
+
+            // TODO: responsive layout and color
+            display: block;
+            padding: 140px 0 20px;
+        }
+
+        .col-md-3 {
+            .number, .plus {
+                font-weight: 800;
+            }
+            .number {
+                font-size: 150px;
+                position: relative;
+                padding-left: 50px;
+            }
+            .years {
+                @include secondary-typeface;
+                font-size: 30px;
+                text-transform: uppercase;
+                position: absolute;
+                top: 45px;
+                right: -90px;
+            }
+            .plus {
+                font-size: 80px;
+            }
+        }
+
+        .organization {
+            padding-top: 30px;
+            font-weight: 800;
+            font-size: 30px;
+            .fa {
+                color: $secondary-color;
+                font-size: 25px;
+                padding-right: 20px;
+            }
+        }
+        .position, p {
+            padding-left: 50px;
+        }
+        .position {
+            @include secondary-typeface;
+            font-size: 22px;
+            padding-bottom: 10px;
+        }
+        p {
+            padding-bottom: 25px;
+        }
+    }
+}
+
+/* skills */
+#skills {
+    position: relative;
+    overflow: hidden;
+    .background-image-overlay {
+        $angle: 120deg;
+        $beginColor: rgba(#202f55, .9);
+        $secondColor: rgba(#202f55, .7);
+        $thirdColor: rgba(#202f55, .5);
+        $noColor: rgba(0,0,0,0);
+        @include linear-gradient($angle, $beginColor, $secondColor, $thirdColor, $noColor);
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 99;
+    }
+
+    .background-image {
+        background-image: $bg-img;
+        background-size: cover;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 98;
+        background-position: 50% 50%;
+
+        $grayscaleAmount : 100%;
+        -webkit-filter: grayscale($grayscaleAmount);
+        -moz-filter: grayscale($grayscaleAmount);
+        -o-filter: grayscale($grayscaleAmount);
+        -ms-filter: grayscale($grayscaleAmount);
+        filter: grayscale($grayscaleAmount);
+    }
+    .container {
+        position: relative;
+        z-index: 100;
+    }
+    
+    .skill-card {
+        color: $main-fontcolor;
+        background-color: $main-color;
+        padding: 20px;
+        margin: 20px 10px;
+        @include center-align-icon(80px);
+        .skill-name {
+            font-weight: 800;
+            font-size: 22px;
+            line-height: 1.7;
+        }
+    }
+
+    .tool-box {
+        color: $main-fontcolor;
+        margin: 60px 10px 10px;
+        .tools-title {
+            @include secondary-typeface;
+            font-size: 30px;
+            text-transform: uppercase;
+            line-height: 1.8;
+            background-color: $main-color;
+        }
+        .tools {
+            background-color: rgba(255,255,255, 0.3);
+            padding: 10px;
+            .tool {
+                background-color: $main-color;
+                margin: 5px 10px;
+                font-size: 1rem;
+                &:hover, &:focus {
+                    color: $main-fontcolor;
+                }
+            }
+        }        
+    }
+}
+
+/* works */
+#work {
+    background-color: lighten(#4e5d82, 5%);
+    .work-btn {
+        @include secondary-typeface;
+        font-size: 22px;
+        text-transform: capitalize;
+        border-radius: 0;
+        background-color: $main-color;
+        color: $main-fontcolor;
+    }
+    @import "_gallery.scss";
+}
+
+/* contact */
+#contact {
+    color: $main-fontcolor;
+    .now-building {
+        position: absolute;
+        display: block;
+        z-index: 10;
+        top: -20px;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(lighten(#4e5d82, 5%), 0.7);
+        color: #fff;
+        font-size: 30px;
+        line-height: 2;
+    }
+
+    input, textarea, button {
+        padding: 20px;
+        font-size: 22px;
+        border-radius: 0;
+    }
+    input, textarea {
+        border: 3px solid lighten($secondary-color, 60%);
+    }
+    input, button {
+        height: 70px;
+    }
+    textarea {
+        resize: vertical;
+    }
+    button {
+        width: 100%;
+        color: $main-color;
+        background-color: lighten($secondary-color, 10%);
+        @include simple-transition;
+        &:hover, &:focus {
+            color: $main-color;
+            background-color: $secondary-color;
+        }
+    }
+
+    .general-info, .info-name {
+        font-size: 22px;
+    }
+    .general-info {
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    .info-name, .info-titles, .info-mail, .social {
+        padding-top: 20px;
+    }
+    .info-titles {
+        font-size: 18px;
+    }
+    .social-network {
+        list-style: none;
+        display: inline;
+        padding-left: 0;
+        li {
+            display: inline;
+            padding: 0 5px;
+        }
+    }
+    .social-circle li a {
+        color: $main-color;
+        background-color: $secondary-color;
+        display: inline-block;
+        position: relative;
+        margin: 0 auto;
+        border-radius: 50%;
+        text-align: center;
+        width: 50px;
+        height: 50px;
+        font-size: 22px;
+        line-height: 2;
+        @include simple-transition;
+        &:hover, &:focus {
+            color: lighten($secondary-color, 40%);
+        }
+    }
+}
+
+footer {
+    color: $secondary-color;
+    padding: 10px 0 0;
+}
