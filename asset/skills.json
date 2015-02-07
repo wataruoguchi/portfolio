@@ -1,9 +1,9 @@
 {
 	"summaries": [
-		{"icon-name":"icon-terminal","skill-name":"Software Development","desc":"Architecting, building, testing, distributing, mentoring, leading, and teaching users. I have experience in most areas of software development and can quickly learn new things in this field."},
-		{"icon-name":"icon-webdev","skill-name":"Web Development","desc":"Designing, building, testing, SEO and tackling the cutting edge of technology. I have built a responsive &amp; RESTful CMS from scratch with those skills and teaching myself AngularJS."},
-		{"icon-name":"icon-teamwork","skill-name":"Team Work","desc":"Working with many teams, negotiating with clients, mentoring colleagues and leading a small team. I have experience and confidence in all of the above mentioned areas."},
-		{"icon-name":"icon-hardwork","skill-name":"Always, Love to Work Hard","desc":"I’m Japanese, need I say more :) I love working hard! My passion lies in learning new things constantly with an open mind and I feel that by working hard it’s the only real way to get the proper job done."}
+		{"iconName":"icon-terminal","skillName":"Software Development","desc":"Architecting, building, testing, distributing, mentoring, leading, and teaching users. I have experience in most areas of software development and can quickly learn new things in this field."},
+		{"iconName":"icon-webdev","skillName":"Web Development","desc":"Designing, building, testing, SEO and tackling the cutting edge of technology. I have built a responsive & RESTful CMS from scratch with those skills and teaching myself AngularJS."},
+		{"iconName":"icon-teamwork","skillName":"Team Work","desc":"Working with many teams, negotiating with clients, mentoring colleagues and leading a small team. I have experience and confidence in all of the above mentioned areas."},
+		{"iconName":"icon-hardwork","skillName":"Always, Love to Work Hard","desc":"I’m Japanese, need I say more :) I love working hard! My passion lies in learning new things constantly with an open mind and I feel that by working hard it’s the only real way to get the proper job done."}
 	],
 	"tools": [
 		{"name":"C","dev":"academy","tag":"language"},

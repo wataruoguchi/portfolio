@@ -5,93 +5,31 @@
 		<h2>Skills</h2>
 		<p class="lead">Resourceful skills are ready to go with your team.</p>
 	</div>
-	<div class="row">
-		<div class="col-sm-6">
-			<div class="skill-card">
-				<div class="row">
-					<div class="col-xs-4 frame-of-icon">
-						<i class="icon-terminal"></i>
-					</div>
-					<div class="col-sm-8">
-						<div class="skill-name">Software Development</div>
-						<p>Architecting, building, testing, distributing, mentoring, leading, and teaching users. I have experience in most areas of software development and can quickly learn new things in this field.</p>
-					</div>
-				</div>
-			</div> <!-- skill-card end -->
-		</div> <!-- col-sm-6 end -->
-		<div class="col-sm-6">
-			<div class="skill-card">
-				<div class="row">
-					<div class="col-xs-4 frame-of-icon">
-						<i class="icon-webdev"></i>
-					</div>
-					<div class="col-sm-8">
-						<div class="skill-name">Web Development</div>
-						<p>Designing, building, testing, SEO and tackling the cutting edge of technology. I have built a responsive &amp; RESTful CMS from scratch with those skills and teaching myself AngularJS.</p>
+	<span ng-repeat="forGetttingParentIndex in summaries">  <!-- loop -->
+		<div class="row" ng-if="$index<summaries.length/2+1">
+			<span ng-repeat="summary in summaries">
+				<div class="col-sm-6" ng-if="$index >= 2*$parent.$index && $index <= 3*$parent.$index+1">
+					<div class="skill-card">
+						<div class="row">
+							<div class="col-xs-4 frame-of-icon">
+								<i class="{{summary.iconName}}"></i>
+							</div>
+							<div class="col-sm-8">
+								<div class="skill-name">{{summary.skillName}}</div>
+								<p>{{summary.desc}}</p>
+							</div>
+						</div>
 					</div>
 				</div>
-			</div> <!-- skill-card end -->
-		</div> <!-- col-sm-6 end -->
-		<div class="col-sm-6">
-			<div class="skill-card">
-				<div class="row">
-					<div class="col-xs-4 frame-of-icon">
-						<i class="icon-teamwork"></i>
-					</div>
-					<div class="col-sm-8">
-						<div class="skill-name">Team Work</div>
-						<p>Working with many teams, negotiating with clients, mentoring colleagues and leading a small team. I have experience and confidence in all of the above mentioned areas.</p>
-					</div>
-				</div>
-			</div> <!-- skill-card end -->
-		</div> <!-- col-sm-6 end -->
-		<div class="col-sm-6">
-			<div class="skill-card">
-				<div class="row">
-					<div class="col-xs-4 frame-of-icon">
-						<i class="icon-hardwork"></i>
-					</div>
-					<div class="col-sm-8">
-						<div class="skill-name">Always, Love to Work Hard</div>
-						<p>I’m Japanese, need I say more :) I love working hard! My passion lies in learning new things constantly with an open mind and I feel that by working hard it’s the only real way to get the proper job done.</p>
-					</div>
-				</div>
-			</div> <!-- skill-card end -->
-		</div> <!-- col-sm-6 end -->
-	</div>
+			</span>
+		</div>
+	</span>
 	<div class="row">
 		<div class="col-sm-12">
 			<div class="tool-box">
 				<div class="tools-title text-center">My tools</div>
 				<div class="tools text-center">
-					<span class="tool btn">C</span>
-					<span class="tool btn">C++</span>
-					<span class="tool btn">Objective-C</span>
-					<span class="tool btn">C#</span>
-					<span class="tool btn">VB .NET</span>
-					<span class="tool btn">Java SE 6</span>
-					<span class="tool btn">CSS</span>
-					<span class="tool btn">PHP</span>
-					<span class="tool btn">JavaScript</span>
-					<span class="tool btn">Sass</span>
-					<span class="tool btn">HTML</span>
-					<span class="tool btn">jQuery</span>
-					<span class="tool btn">Microsoft SQL Server</span>
-					<span class="tool btn">Oracle SQL</span>
-					<span class="tool btn">PL/SQL</span>
-					<span class="tool btn">PeopleCode</span>
-					<span class="tool btn">Bash</span>
-					<span class="tool btn">XML</span>
-					<span class="tool btn">Tex/LaTeX</span>
-					<span class="tool btn">JSON</span>
-					<span class="tool btn">Ajax</span>
-					<span class="tool btn">MVC</span>
-					<span class="tool btn">OOD/OOP</span>
-					<span class="tool btn">UML</span>
-					<span class="tool btn">ASP</span>
-					<span class="tool btn">JSP</span>
-					<span class="tool btn">RESTful</span>
-					<span class="tool btn">Microsoft IIS</span>
+					<span class="tool btn" ng-repeat="tool in tools">{{tool.name}}</span>
 				</div>
 			</div>
 		</div>

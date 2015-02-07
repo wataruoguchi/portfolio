@@ -3,78 +3,19 @@
 		<h2>I'm your guy</h2>
 		<p class="lead">I will bring these qualities to your team with a great attitude to boot!</p>
 	</div>
-	<div class="row">
-		<div class="col-xs-6 col-md-3 quality-card">
-			<div class="thumbnail">
-				<div class="frame-of-icon">
-					<i class="icon-knowledge"></i>
-				</div>
-				<h3 class="caption-title text-center">Over 5 years experience</h3>
-				<p>Faced many problems, and solved them many times. I have built up solid confidence from my many experiences.</p>
-			</div>
-		</div>
-		<div class="col-xs-6 col-md-3 quality-card">
-			<div class="thumbnail">
-				<div class="frame-of-icon">
-					<i class="icon-available"></i>
-				</div>
-				<h3 class="caption-title text-center">Quick Learner</h3>
-				<p>I've worked with many languages that I didn't even know. However I quickly picked them up and don't hesitate when tackling new things.</p>
-			</div>
-		</div>
-		<div class="col-xs-6 col-md-3 quality-card">
-			<div class="thumbnail">
-				<div class="frame-of-icon">
-					<i class="icon-responsibility"></i>
-				</div>
-				<h3 class="caption-title text-center">Sense of Responsibility</h3>
-				<p>I've been on teams that faced hard projects. Sure the project were difficult but I always worked hard and got the goal done.</p>
-			</div>
-		</div>
-		<div class="col-xs-6 col-md-3 quality-card">
-			<div class="thumbnail">
-				<div class="frame-of-icon">
-					<i class="icon-OOPmind"></i>
-				</div>
-				<h3 class="caption-title text-center">Logical Thinking</h3>
-				<p>Programming improves my logic daily. I feel confident that I will bring solid logic and critical thinking to your team.</p>
-			</div>
-		</div>
-		<div class="col-xs-6 col-md-3 quality-card">
-			<div class="thumbnail">
-				<div class="frame-of-icon">
-					<i class="icon-cog"></i>
-				</div>
-				<h3 class="caption-title text-center">Productivity</h3>
-				<p>I am very productive and use my time wisely. I like building tools in order to make processes more effective.</p>
-			</div>
-		</div>
-		<div class="col-xs-6 col-md-3 quality-card">
-			<div class="thumbnail">
-				<div class="frame-of-icon">
-					<i class="icon-contribution"></i>
-				</div>
-				<h3 class="caption-title text-center">Different Perspective</h3>
-				<p>I have different perspective and background and feel I can contribute that to any project I take on.</p>
-			</div>
-		</div>
-		<div class="col-xs-6 col-md-3 quality-card">
-			<div class="thumbnail">
-				<div class="frame-of-icon">
-					<i class="icon-mindset"></i>
-				</div>
-				<h3 class="caption-title text-center">Professional Mind</h3>
-				<p>I've been a professional engineer my whole life. I look at every experience as a learning situation.</p>
-			</div>
-		</div>
-		<div class="col-xs-6 col-md-3 quality-card">
-			<div class="thumbnail">
-				<div class="frame-of-icon">
-					<i class="icon-analysis"></i>
-				</div>
-				<h3 class="caption-title text-center">Problem Analysis</h3>
-				<p>I've faced and then solved a lot of big problems by analysing the true nature of the problems and them solving them accordingly.</p>
-			</div>
-		</div>
-	</div>
+	<span ng-repeat="forGetttingParentIndex in results">
+		<div class="row" ng-if="$index<results.length/4+1">
+			<span ng-repeat="result in results">
+				<div class="col-xs-6 col-md-3 quality-card" ng-if="$index >= 4*$parent.$index && $index <= 4*($parent.$index+1)-1">
+					<div class="thumbnail">
+						<div class="frame-of-icon">
+							<i class="{{result.iconName}}"></i>
+						</div>
+						<h3 class="caption-title text-center">{{result.title}}</h3>
+						<p>{{result.desc}}</p>
+					</div>
+				</div>				
+			</span>
+		</div>		
+	</span>
 </div>

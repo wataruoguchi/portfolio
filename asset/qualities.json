@@ -1,12 +1,12 @@
 {
 	"qualities": [
-		{"icon-name":"icon-knowledge","title":"Over 5 years experience","desc":"Faced many problems, and solved them many times. I have built up solid confidence from my many experiences."},
-		{"icon-name":"icon-available","title":"Quick Learner","desc":"I've worked with many languages that I didn't even know. However I quickly picked them up and don't hesitate when tackling new things."},
-		{"icon-name":"icon-responsibility","title":"Sense of Responsibility","desc":"I've been on teams that faced hard projects. Sure the project were difficult but I always worked hard and got the goal done."},
-		{"icon-name":"icon-OOPmind","title":"Logical Thinking","desc":"Programming improves my logic daily. I feel confident that I will bring solid logic and critical thinking to your team."},
-		{"icon-name":"icon-cog","title":"Productivity","desc":"I am very productive and use my time wisely. I like building tools in order to make processes more effective."},
-		{"icon-name":"icon-contribution","title":"Different Perspective","desc":"I have different perspective and background and feel I can contribute that to any project I take on."},
-		{"icon-name":"icon-mindset","title":"Professional Mind","desc":"I've been a professional engineer my whole life. I look at every experience as a learning situation."},
-		{"icon-name":"icon-analysis","title":"Problem Analysis","desc":"I've faced and then solved a lot of big problems by analysing the true nature of the problems and them solving them accordingly."}
+		{"iconName":"icon-knowledge","title":"Over 5 years experience","desc":"Faced many problems, and solved them many times. I have built up solid confidence from my many experiences."},
+		{"iconName":"icon-available","title":"Quick Learner","desc":"I've worked with many languages that I didn't even know. However I quickly picked them up and don't hesitate when tackling new things."},
+		{"iconName":"icon-responsibility","title":"Sense of Responsibility","desc":"I've been on teams that faced hard projects. Sure the project were difficult but I always worked hard and got the goal done."},
+		{"iconName":"icon-OOPmind","title":"Logical Thinking","desc":"Programming improves my logic daily. I feel confident that I will bring solid logic and critical thinking to your team."},
+		{"iconName":"icon-cog","title":"Productivity","desc":"I am very productive and use my time wisely. I like building tools in order to make processes more effective."},
+		{"iconName":"icon-contribution","title":"Different Perspective","desc":"I have different perspective and background and feel I can contribute that to any project I take on."},
+		{"iconName":"icon-mindset","title":"Professional Mind","desc":"I've been a professional engineer my whole life. I look at every experience as a learning situation."},
+		{"iconName":"icon-analysis","title":"Problem Analysis","desc":"I've faced and then solved a lot of big problems by analysing the true nature of the problems and them solving them accordingly."}
 	]
 }

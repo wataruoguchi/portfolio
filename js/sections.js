@@ -1,6 +1,6 @@
 //Only for person entity
 (function() {
-	var app = angular.module('person', []);
+	var app = angular.module('sections', ['controllers']);
 	app.directive("top", function() {
 		return {
 			restrict: 'E',
@@ -10,7 +10,8 @@
 	app.directive("why", function() {
 		return {
 			restrict: 'E',
-			templateUrl: './partials/why.html'
+			templateUrl: './partials/why.html',
+			controller: 'QualitiesController'
 		};
 	});
 	app.directive("about", function() {
@@ -28,7 +29,8 @@
 	app.directive("skills", function() {
 		return {
 			restrict: 'E',
-			templateUrl: './partials/skills.html'
+			templateUrl: './partials/skills.html',
+			controller: 'SkillsController'
 		};
 	});
 	app.directive("work", function() {
