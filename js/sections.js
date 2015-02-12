@@ -36,7 +36,8 @@
 	app.directive("work", function() {
 		return {
 			restrict: 'E',
-			templateUrl: './partials/work.html'
+			templateUrl: './partials/work.html',
+			controller: 'WorksController'
 		};
 	});
 	app.directive("contact", function() {

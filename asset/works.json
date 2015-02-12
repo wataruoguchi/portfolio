@@ -1,0 +1,22 @@
+{
+	"works": [
+		{
+			"title":"A Blog Mockup with AngularJS",
+			"shortTitle":"Front-End Web Site",
+			"description":"My first website with AngularJS.<br>I was teaching myself AngularJS after school for a month. During that term I built this website in a week.<br>In <a href='https://developers.google.com/speed/pagespeed/insights/' target='_blank'>PageSpeed Insights by Google</a>, this website scores 70/100 in Speed, <strong>100/100</strong> in User Experience. Always, I would love to be on the cutting edge.<br><br><a href='http://wataruoguchi.com/vanarts/term3project/' target='_blank'>Live Demo</a><br><a href='https://github.com/wataruoguchi/worpdress-BlogWebsite-And-CMS' target='_blank'>GitHub</a>",
+			"thumbnailImage":"./asset/frontend.jpg"
+		},
+		{
+			"title":"Worpdress - A responsive CMS for Blog with AngularJS",
+			"shortTitle":"Responsive CMS",
+			"description":"Lean one thing, apply the skill everywhere. I was learning AngularJS with building the contents manage system. I'm assuming AngularJS is powerful especially for backend because of the strong data binding feature. I learnt RESTful and Asynchronous I/O by acquiring AngularJS.<br><br><a href='http://wataruoguchi.com/vanarts/term3project/cms/' target='_blank'>Live Demo</a><br>Feel free to log in<ul><li><label>email address: </label>test@test.com</li><li><label>password: </label>1234</li></ul><br><a href='https://github.com/wataruoguchi/worpdress-BlogWebsite-And-CMS' target='_blank'>GitHub</a>",
+			"thumbnailImage":"./asset/backend.jpg"
+		},
+		{
+			"title":"Web Design - Hotel Website Mockup",
+			"shortTitle":"Web Design",
+			"description":"This is a mock client project, for a boutique designer hotel names The Get Away. This school teaches the process of web development. Research client's market, target, requirement and goal. Then make the documentation, sitemap, wireframe and design mock up. Even though it is a dummy client, learning the right process with clients is reasonable.",
+			"thumbnailImage":"./asset/mockup-01-top.jpg"
+		}
+	]
+}

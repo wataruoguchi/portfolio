@@ -176,7 +176,7 @@ h2 {
   font-weight: 300;
 }
 #top .header-line-3 {
-  line-height: 0.75;
+  line-height: 0.82;
 }
 #top .header-jobtitle {
   padding: 40px 0;
@@ -483,6 +483,22 @@ h2 {
   -webkit-transform: scale(1);
   transform: scale(1);
 }
+#work .img-box .thumbnail-image {
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: 100% auto;
+  width: 100%;
+}
+#work .img-box .thumbnail-image:after {
+  content: "";
+  display: block;
+  padding-top: 80%;
+}
+#work .img-box img {
+  width: 100%;
+  height: auto;
+}
 #work .overlay {
   position: absolute;
   top: 0;
@@ -525,6 +541,16 @@ h2 {
   margin-top: -8px;
   margin-left: -8px;
   text-align: center;
+}
+#work .modal {
+  color: #323237;
+}
+#work .modal .modal-title {
+  font-weight: 800;
+}
+#work .modal .work-description {
+  padding-top: 20px;
+  font-size: 19px;
 }
 
 /* contact */

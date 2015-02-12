@@ -11,6 +11,24 @@
 		transform: scale(1);
 	}
 }
+.img-box {
+	.thumbnail-image {
+		background-position: top center;
+		background-repeat: no-repeat;
+		background-attachment: scroll;
+		background-size: 100% auto;
+		width: 100%;
+		&:after {
+			content: "";
+			display: block;
+			padding-top: 80%;
+		}
+	}
+	img {
+		width: 100%;
+		height: auto;
+	}
+}
 .overlay {
 	position: absolute;
 	top: 0;

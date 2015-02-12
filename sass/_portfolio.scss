@@ -135,7 +135,7 @@ h2 {
         @include secondary-typeface;
     }
     .header-line-3 {
-        line-height: 0.75;
+        line-height: 0.82;
     }
     .header-jobtitle {
         padding: 40px 0;
@@ -421,6 +421,16 @@ h2 {
         color: $main-fontcolor;
     }
     @import "_gallery.scss";
+    .modal {
+        color: $main-fontcolor;
+        .modal-title {
+            font-weight: 800;
+        }
+        .work-description {
+            padding-top: 20px;
+            font-size: 19px;
+        }
+    }
 }
 
 /* contact */
