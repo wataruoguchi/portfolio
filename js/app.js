@@ -1,6 +1,6 @@
 //Main. Routing
 (function() {
-	var app = angular.module('portfolioApp', ['ui.router', 'sections', 'page']);
+	var app = angular.module('portfolioApp', ['ui.router', 'sections', 'page', 'ngResource']);
 
 	//Routing by ui.router
 	app.config(function ($stateProvider, $urlRouterProvider) {

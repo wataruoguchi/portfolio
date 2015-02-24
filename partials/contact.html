@@ -1,26 +1,32 @@
+<style>
+	.error {color: red;}
+</style>
 <div class="container">
 		<div class="heading text-center">
 			<h2>Contact</h2>
 			<p class="lead">Would you like to know more about me? Get in touch!</p>
 		</div>
 		<div class="row">
-			<!-- <div class="col-md-8">
-				<form action="">
+			<div class="col-md-8">
+				<form name="contactForm" novalidate>
 					<div class="form-group">
-						<input type="text" class="form-control" id="input-name" placeholder="Name * ">
+						<span class="error" ng-show="contactForm.fName.$dirty && contactForm.fName.$invalid">Oops, please leave your name within 50 characters</span>
+						<input type="text" class="form-control" id="input-name" name="fName" ng-model="contact.name" placeholder="Name * " required>
 					</div>
 					<div class="form-group">
-						<input type="email" class="form-control" id="input-email" placeholder="Email address * ">
+						<span class="error" ng-show="contactForm.fEmail.$dirty && contactForm.fEmail.$invalid">Please input your email address</span>
+						<input type="email" class="form-control" id="input-email" name="fEmail" ng-model="contact.email"  placeholder="Email address * " required>
 					</div>
 					<div class="form-group">
-						<textarea name="" id="input-message" cols="30" rows="10" class="form-control" placeholder="Message * "></textarea>
+						<span class="error" ng-show="contactForm.fMessage.$dirty && contactForm.fMessage.$invalid">Oops, let me know your message</span>
+						<textarea id="input-message" cols="30" rows="10" class="form-control" name="fMessage" ng-model="contact.message" placeholder="Message * " required></textarea>
 					</div>
 					<div class="form-group">
-						<button class="btn btn-default">Get in touch!</button>
+						<button class="btn btn-default" ng-click="submitContact();" ng-disabled="!contactForm.fName.$valid || !contactForm.fEmail.$valid || !contactForm.fMessage.$valid">Get in touch!</button>
 					</div>
 				</form>
-			</div> -->
-			<div class="col-md-4 col-md-offset-4 text-center">
+			</div>
+			<div class="col-md-4 text-center">
 				<div class="general-info">General Info.</div>
 				<div class="info-name">Wataru Oguchi</div>
 				<div class="info-titles">Software Engineer <br>&amp; Web Developer</div>

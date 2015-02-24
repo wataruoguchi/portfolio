@@ -43,7 +43,8 @@
 	app.directive("contact", function() {
 		return {
 			restrict: 'E',
-			templateUrl: './partials/contact.html'
+			templateUrl: './partials/contact.html',
+			controller: 'ContactController'
 		};
 	});
 }());

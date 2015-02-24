@@ -34,4 +34,27 @@
 			$scope.tools = response.tools;
 		});
 	});
+
+	//Contact
+	app.controller('ContactController', function($scope, $stateParams, $state, $resource){
+		$scope.contact = [];
+
+		var Res = $resource('./php/porfolioContact.php');
+
+		$scope.submitContact = function() {
+			var formSet = [];
+			formSet.push({
+				name:$scope.contact.name,
+				email:$scope.contact.email,
+				message:$scope.contact.message});
+			Res.save(formSet);
+			
+			//page reload
+			$state.transitionTo($state.current, $stateParams, {
+				reload: true,
+				inherit: false,
+				notify: true
+			});
+		};
+	});
 }());
