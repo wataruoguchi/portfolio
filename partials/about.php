@@ -1,0 +1,16 @@
+<div class="background-image"></div>
+<div class="container">
+	<div class="heading text-center">
+		<h2>About</h2>
+		<p class="lead">Want to know a bit more about me? Let me tell you a few more things.</p>
+	</div>
+	<div class="row text-container">
+		<div class="col-xs-12">
+			<div class="row">
+				<div class="col-sm-12">
+					<p class="text-center">I am a passionate engineer, who loves learning technology.<br>My goal is to work with fellow professionals, while positively influencing each other.<br>Making the world a better and more efficient place through technology is what I strive for.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
